@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+body {
+    background-color:#bbf1ef;
+    font-family: 'Noto Sans JP', 'Noto Serif JP', sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+.version1 {
+    display: flex;
+}
+.calculator {
+    justify-content: center;
+}
+.cWindow {
+    display:flex;
+    width:160px;
+    height:30px;
+    background-color:#fff;
+    border:1px solid #000;
+    text-align:end;
+}
+.cStep {
+    display:flex;
+    margin: 0 auto;
+}
+.cButton,.cButtonV2 {
+    width:30px;
+    height:30px;
+    margin: 5px ;
+    border:1px solid #000;
+    text-align: center;
+    background-color:rgb(223, 223, 223);
+}
+.num {
+    font-size:14px;
+}
+.ope {
+    font-size:20px;
+    font-weight:bold;
+}
+.firstNumber, .secondOperator, .thirdNumber, .cResult{
+    display: flex;
+    width: 40px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #000;
+}
