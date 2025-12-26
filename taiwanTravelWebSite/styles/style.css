@@ -1,0 +1,1068 @@
+@charset "utf-8";
+
+/* * {
+    border : 1px solid #000;
+} */
+body {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    min-width: 375px;
+    line-height: 1.6;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+.text {
+    text-align: center;
+}
+/* ハンバーガーの開閉部分 */
+.hamburger {
+    flex: 0 0 48px;
+    position: fixed;
+    top: 4px;
+    right: 4px;
+    z-index: 100;
+    /* zは100でなくても良いが入れないと背景に隠れます。 */
+}
+/* ドロワー部分 */
+#drawer {
+    line-height:1.6;
+    background-color: #007AB7;
+    width: 225px;
+    max-height:100%;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    right: -225px;
+}
+/* ドロワー開閉*/
+#wrapper,#drawer {
+    transition: transform 0.3s;
+}
+.show {
+    transform: translate(-225px, 0);
+}
+.vanish {
+    display:none;
+}
+/* ドロワー部分終了 */
+.dTop {
+    display: flex;
+    margin: 4px 4px 80px 12px;
+}
+.drawerIcon {
+    max-width: 100%;
+    width: 101px;
+    height: 40px;
+    margin-right: 60px;
+    transform: translateY(4px);
+}
+.dIcon {
+    flex: 0 0 48px;
+}
+.dList {
+    display: block;
+}
+.dItem a {
+    display: inline-block;
+    /* 文字幅＝要素幅にするため*/
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    /* 下線 */
+}
+.itemA {
+    margin-bottom: 60px;
+}
+.itemB {
+    margin-bottom: 40px;
+}
+.itemC {
+    margin-bottom: 20px;
+}
+.tArea {
+    text-align: left;
+    width: 223px;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 12px 0;
+    margin-bottom: 60px;
+}
+.eArea {
+    text-align: left;
+    width: 223px;
+    margin: 0 auto;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    padding: 12px 0;
+    margin-bottom: 40px;
+}
+header {
+    height: 667px;
+    background-image: url(../images/topViewSp.png);
+    background-size: cover;
+    /* 画像を要素サイズに合わせて拡大縮小 */
+    background-position: center;
+    /* 画像の中心を合わせる */
+    background-repeat: no-repeat;
+    /* background-repeat:no-repeat */
+}
+.topHeader {
+    position: relative;
+}
+.titleLogo {
+    /* max-width: none; */
+    position: absolute;
+    width: 335px;
+    top: 205px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.headerSnsIcon {
+    display: inline-flex;
+    flex-direction: column;
+    width: 38.9px;
+    height: 136px;
+    gap: 11px;
+    position: absolute;
+    top: 466px;
+    left: 50%;
+    transform: translateX(-167px);
+}
+.faceIcon {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.instaIcon {
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+.twiIcon {
+    display: block;
+    width: 39px;
+    height: 32px;
+}
+.nMark {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+}
+.formosa {
+    height: 806px;
+}
+.fLine {
+    width: 132px;
+    height: 24px;
+    border-bottom: 1px solid #000;
+    margin: 0 auto 60px;
+}
+.fTown {
+    height: 407px;
+    background-image: url(../images/introduction1Bg.png);
+    background-size: cover;
+    /* 画像を要素サイズに合わせて拡大縮小 */
+    background-position: center;
+    /* 画像の中心を合わせる */
+    background-repeat: no-repeat;
+}
+.fSea {
+    height: 399px;
+    background-image: url(../images/introduction2Bg.png);
+    background-size: cover;
+    /* 画像を要素サイズに合わせて拡大縮小 */
+    background-position: center;
+    /* 画像の中心を合わせる */
+    background-repeat: no-repeat;
+    padding-top: 20px;
+}
+.fImage {
+    width: 335px;
+    height: 139px;
+    margin: 0 auto;
+}
+.h2Title {
+    font-size: 24px;
+    padding-top: 20px;
+    margin-bottom: 60px;
+    position: relative;
+}
+.h2Title::after {
+    content: url();
+    position: absolute;
+    background-image: url(../images/headingBg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    bottom: 0;
+    /* left: 77.5px; */
+    width: 220px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.kana {
+    font-size: 12px;
+}
+h3 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.bInfo {
+    margin: 20px auto 0;
+}
+.nInfo {
+    text-align: left;
+    font-size: 12px;
+    margin: 40px 20px;
+}
+.map {
+    height: 807px;
+    background-color: #F4F4F4;
+    position: relative;
+}
+.mapWrap {
+    position: relative;
+    width: 255px;
+    height: 407px;
+    margin: 0 auto 60px;
+}
+.mapWrap img {
+    display: block;
+}
+.mapBase {
+    width: 180px;
+    position: absolute;
+    top: 0;
+    left: 37px;
+}
+.pin {
+    position: absolute;
+    width: 60px;
+}
+.northPin {
+    top: 55px;
+    right: 0;
+}
+.centerPin {
+    top: 88px;
+    left: 0;
+}
+.southPin {
+    left: 52px;
+    bottom: 0;
+}
+.mapBorder {
+    border-top: 1px solid #000;
+    width: 223px;
+    margin: 0 auto 60px;
+}
+.event {
+    height: 1116px;
+    border-top: 1px solid #000;
+    background-color: #F4F4F4;
+}
+.eImage {
+    width: 335px;
+    height: 194px;
+    margin: 0 auto 20px;
+}
+.eTerm {
+    font-weight: bold;
+    /* margin-bottom: 8px; */
+}
+.eDay {
+    margin-bottom: 15px;
+}
+.info {
+    height: 624px;
+    border-top: 1px solid #000;
+    background-color: #F4F4F4;
+}
+.infoBlock {
+    width: 335px;
+    margin: 20px auto 0;
+    border: 1px solid #8F8F8F;
+}
+/* フッター部分の修飾 */
+.linkFooter {
+    height: 349px;
+    background-color: #007AB7;
+    position: relative;
+}
+.fMark {
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    padding-top: 20px;
+}
+.fLink {
+    width: 195px;
+    height: 167px;
+    margin: 0 auto 80px;
+}
+.fText {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    margin-top: 6px;
+    padding-bottom: 5px;
+}
+.footerSnsIcon {
+    display: inline-flex;
+    gap: 11px;
+    position: absolute;
+    top: 271px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footerLogo {
+    width: 78px;
+    height: 21px;
+    position: absolute;
+    top: 275px;
+    left: 50%;
+    transform: translateX(-168px);
+}
+.cRight {
+    text-align: center;
+    border-top: 1px solid #03A9F4;
+    height: 34px;
+    padding-top: 5px;
+    color: #fff;
+}
+small {
+    align-self: center;
+}
+/* トップへ戻るアイコン */
+.toTopIcon {
+    position: fixed;
+    bottom: 20px;
+    width: 48px;
+    height: 48px;
+    right: 50%;
+    transform: translateX(168px);
+}
+/* スライダーの箇所 */
+.gallery {
+    height: 685px;
+}
+.gTop {
+    height: 120px;
+}
+.gSlider {
+    height: 565px;
+}
+.sliderBlock {
+    display: flex;
+    justify-content: center;
+}
+
+/* カルーセルのため追加 */
+.progress-bar {
+    width: 100px;
+    height: 20px;
+    background-color: #ddd;
+    position: absolute;
+    bottom: 50px;
+}
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: black;
+}
+.progress.go {
+    width: 100%;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+/* スマホ版でのスライダーのCSS */
+@media screen and (max-width:768px) {
+    .pcSlideShow ,.pcSliderIcon{
+        display:none;
+    }
+    .gallery {
+        width:375px;
+        overflow: hidden;
+    }
+    .slideShow {
+        position:relative;
+        width:375px;
+        overflow-x: scroll;
+        /* スクロールがどうしてもおかしい */
+        margin:0 auto;
+        left:50%;
+        transform: translateX(-50%);
+        justify-content: center;
+    }
+    .spSlider {
+        width:1599px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        margin-bottom: 20px;
+        /* 1212追加 */
+        position: relative;
+        left: 0;
+    }
+    .sliderIcon {
+        display: flex;
+        gap: 40px;
+        width: 375px;
+        height: 20px;
+        margin: 0 auto;
+        margin-bottom: 40px;
+        justify-content: center;
+        position: relative;
+    }
+    .frame {
+        width: 297px;
+        height: 495px;
+    }
+    .spIcon {
+        width: 18px;
+        height: 18px;
+    }
+    /* アニメーションONのときに適用 */
+    .slideMove {
+        transition: left 0.5s linear;
+        /* ← 必須 */
+    }
+} 
+
+/*ローディング*/
+/* 回転の動き */
+.loading {
+    width: 100%;
+    height: 100vh;
+    /* 【確認】100vhに直す？ */
+    background-color: #007AB7;
+    /* 背景を青に */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 👈 【追加】JavaScriptで opacity: 0 になったときに 0.5秒でフェードアウトさせる */
+    /* JavaScriptのsetTimeout(500)と一致させる */
+    transition: opacity 0.5s ease-in-out;
+    z-index: 9999;
+    /* 他のコンテンツの上に確実に表示 */
+    position: fixed;
+    /* 画面に固定 */
+    top: 0;
+    left: 0;
+}
+.loadingLogo {
+    width: 287px;
+    height: 117px;
+    margin: 0 auto;
+    animation: blink 3.5s infinite;
+    /* アニメーションを繰り返す */
+}
+
+/* 点滅アニメーション */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    /* 見える */
+
+    50% {
+        opacity: 0;
+    }
+    /* 消える */
+
+    100% {
+        opacity: 1;
+    }
+    /* 見える */
+}
+
+
+/* ここからPC版 */
+@media screen and (min-width:768px) {
+    .slideShow,.sliderIcon {
+        display: none;
+    }
+    .pcSlideShow {
+        position:relative;
+        justify-content: center;
+        width:1366px;
+        left:0%;
+        transform: translateX(-50%);
+    }
+    .gallery {
+        overflow: hidden;
+        width:1366px;
+    }
+    .pcFrame {
+        width: 297px;
+        height: 467px;
+    }
+    .pcSlider {
+        display: flex;
+        gap: 80px;
+        width: 2585px;
+        justify-content: center;
+        margin-bottom: 60px;
+        position: relative;
+        left: 0;
+    }
+    .pcSlider.slideMove {
+        transition: left 1.2s linear;
+        /* ← 必須 */
+    }
+    .pcSliderIcon {
+        display: flex;
+        gap: 60px;
+        width: 628px;
+        height: 64px;
+        margin: 0 auto;
+        align-items: center;
+        margin-bottom: 80px;
+    }
+    .pcIcon {
+        width: 28px;
+        height: 28px;
+    }
+    .arrow {
+        width: 64px;
+        height: 64px;
+    }
+    /* ギャラリー部分 */
+    /* 題名の位置移動と画像の差し替え（仮） */
+    .gallery {
+        height: 947px;
+    }
+    .gTop {
+        margin-top:20px;
+        margin-bottom:160px;
+        height:96px;
+    }
+    .gTitle {
+        height:96px;
+    }
+    .gSlider {
+        height: 671px;
+    }
+    .sliderBlock {
+        content: url("../images/slider1Pc.png");
+    }
+    .sliderBall {
+        display: flex;
+        justify-content: center;
+        margin-top: 60px;
+    }
+    /* ギャラリー部分 */
+    /* 題名の位置移動と画像の差し替え（仮） */
+    .gallery {
+        height: 947px;
+    }
+    .gTop {
+        margin-top:20px;
+        margin-bottom:160px;
+        height:96px;
+    }
+    .gTitle {
+        height:96px;
+    }
+    .gSlider {
+        height: 671px;
+    }
+
+    /* ボディ全体の条件 */
+    body {
+        width: 100%;
+        max-width: 1366px;
+        font-size: 20px;
+        margin: 0 auto;
+    }
+    /* 共通部分のPC版への修正 */
+    /* ギャラリーやおすすめスポットの所 */
+    .h2Title {
+        font-size: 48px;
+        margin-bottom:0;
+        padding-top:0;
+    }
+    .kana {
+        font-size: 24px;
+    }
+    .lTitle::after {
+        content: url();
+        position: absolute;
+        background-image: url(../images/headingBg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: 0;
+        width: 530px;
+        height: 96px;
+        left: 50%;
+        transform: translateX(-580px);
+    }
+    .rTitle::after {
+        content: url();
+        position: absolute;
+        background-image: url(../images/headingBg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        bottom: 0;
+        width: 530px;
+        height: 96px;
+        left: 50%;
+        transform: translateX(50px);
+    }
+    .lTitle {
+        position: relative;
+        display: inline-block;
+        left: 27.5%;
+        transform: translateX(-50%);
+        font-size: 48px;
+        text-align: center;
+    }
+    .lTitle::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 530px;
+        height: 96px;
+        background-image: url(../images/headingBg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+    }
+    .rTitle {
+        position: relative;
+        display: inline-block;
+        left: 72.5%;
+        transform: translateX(-50%);
+        font-size: 48px;
+        text-align: center;
+    }
+    .rTitle::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 530px;
+        height: 96px;
+        background-image: url(../images/headingBg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: -1;
+        pointer-events: none;
+    }
+    /* トップ画像のところ */
+    .titleLogo {
+        width: 780px;
+        height: 314px;
+        margin-bottom: 24px;
+    }
+    .titleLogo img {
+        width: 780px;
+        height: 314px;
+    }
+    .headerSnsIcon {
+        display: inline-flex;
+        flex-direction: column;
+        width: 38.9px;
+        height: 176px;
+        gap: 31px;
+        position: absolute;
+        top: 512px;
+        left: 50%;
+        transform: translateX(-608px);
+    }
+    /* フォルモサやイベント各種 */
+    h3 {
+        font-size: 48px;
+        line-height: 1.0;
+    }
+    .fFlex {
+        height: 458px;
+        display: flex;
+        padding: 80px 103px;
+    }
+    .fImage {
+        width: 636px;
+        height: 296px;
+    }
+    .fTown {
+        gap: 163px;
+    }
+    .fSea {
+        gap: 104px;
+    }
+    .fImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 箱を必ず埋める（比率維持・はみ出しは隠れる）GTP経由要復習 */
+    }
+    .fLine {
+        width: 361px;
+        height: 52px;
+        border-bottom: 1px solid #000;
+        margin: 0 auto;
+        padding-bottom: 20px;
+    }
+    .tArea {
+        padding: 0;
+        margin: 0;
+    }
+    .fTArea {
+        width: 420px;
+        /* height: 280px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* ←縦の中央揃え */
+    }
+    /* 課題。画像の位置が変。containとかの都合と思われる。 */
+    .fImage {
+        width: 636px;
+        height: 298px;
+    }
+    .fLine {
+        font-size: 32px;
+        width: 361px;
+        height: 52px;
+    }
+    .nMarkPc {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 100px;
+    }
+    .nMark {
+        padding: 0;
+    }
+    /* 画面上部固定のナビ部分 スマホ版にのみあるMENUは隠す*/
+    /* ハンバーガーメニューの消去 */
+    .hamburger {
+        display: none;
+    }
+    .dIcon {
+        display: none;
+    }
+    .itemA {
+        display: none;
+    }
+    .itemB,.itemC {
+        margin-bottom: 0px;
+    }
+    .dList {
+        display: flex;
+    }
+    .dItem {
+        /* align-self:center; */
+        margin-right: 20px;
+    }
+    .dItem:last-child {
+        margin-right: 0;
+    }
+    .dItem a {
+        border-bottom: none;
+    }
+    .dTop {
+        margin: 0;
+    }
+    .drawerIcon {
+        width: 133px;
+        height: 54px;
+        transform: none;
+        margin: 0;
+    }
+    #drawer {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1366px;
+        padding: 20px 103px;
+        height: 94px;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(0, 0, 0, 0.25);
+        font-size: 24px;
+    }
+    /* ヘッダー部分 */
+    header {
+        height: 768px;
+        background-image: url(../images/topViewPc.png);
+    }
+    /* 最初のフォルモサの部分 */
+    .formosa {
+        height: 916px;
+    }
+    .nMark {
+        Width: 104px;
+        height: 78px;
+        margin: 0;
+    }
+    /* マップ部分 */
+    /* 画像の調整と位置の調整 */
+    .mFlex {
+        display: flex;
+        margin: 120px 163px 80px;
+        justify-content: space-between;
+    }
+    .map {
+        height: 1007px;
+        padding-top:20px;
+    }
+    .mapWrap {
+        width: 400px;
+        height: 611px;
+        margin: 0;
+    }
+    .mTArea {
+        width: 420px;
+        height: 248px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+        /* ←縦の中央揃え */
+    }
+    .mapBase {
+        content: url("../images/mapPc.png");
+        width: 225px;
+        height: 508px;
+        position: absolute;
+        top: 0;
+        left: 79px;
+    }
+    .pin {
+        position: absolute;
+        width: 99px;
+        height: 209px;
+    }
+    .northPin {
+        top: 61px;
+        right: 0;
+    }
+    .centerPin {
+        top: 90px;
+        left: 0;
+    }
+    .southPin {
+        left: 63px;
+        bottom: 0;
+    }
+    .mapBorder {
+        width: 480px;
+        margin: 0 auto 100px;
+    }
+    /* イベント部分 */
+    /* 真ん中に持っていく */
+    .eFlex {
+        display: flex;
+        margin: 120px 103px 80px;
+    }
+    .eTitle {
+        font-size: 36px;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+    .eImage {
+        width: 580px;
+        height: 396px;
+        margin: 0 auto;
+    }
+    .eImage img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        /* 箱を必ず埋める（比率維持・はみ出しは隠れる）GTP経由要復習 */
+    }
+    .eBoxLeft p {
+        text-align: left;
+    }
+    .eBoxRight {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        /* ← これが下寄せ */
+    }
+    .eLanthanum {
+        width: 580px;
+        height: 471px;
+    }
+    .eCount {
+        width: 580px;
+        /* height: 551px; */
+    }
+    .eTerm {
+        margin-bottom: 32px;
+    }
+    .eDay {
+        margin-bottom: 32px;
+    }
+    .eArea {
+        width: 314px;
+        height: 256px;
+        padding: 32px 0;
+        margin-bottom: 0;
+    }
+    .event {
+        height: 1419px;
+        padding-top: 20px;
+    }
+    /* インフォメーション情報部分 */
+    /* 枠を広げてなんとかする */
+    .iFlex {
+        display: flex;
+    }
+    .info {
+        height: 726px;
+        display: block;
+    }
+    .infoBlock {
+        width: 1040px;
+        height: 560px;
+        margin: 80px auto;
+    }
+    .bInfo {
+        font-size: 40px;
+        line-height: 40px;
+        margin: 40px auto 80px;
+    }
+    .nInfo {
+        font-size: 20px;
+        width: 450px;
+        height: 320px;
+        margin: 0 auto 80px;
+    }
+    /* フッターの所 */
+    .linkFooter {
+        height: 489px;
+        padding-top: 40px;
+        /* 仮でpadding設定 */
+    }
+    .fMark {
+        width: 64px;
+        height: 48px;
+        margin: 0 auto 80px;
+        padding-top: 0;
+    }
+    .fLink {
+        margin-left: 103px;
+        margin-bottom: 0;
+        width: 332px;
+        height: 240px;
+    }
+    .fText:first-child {
+        display: none;
+    }
+    .footerLogo {
+        width: 256px;
+        height: 103px;
+        margin-bottom: 20px;
+    }
+    .footerSnsIcon {
+        position: absolute;
+        top: 376px;
+        /* スマホとほぼ同じ高さ調整に合わせる */
+        right: 103px;
+        /* PC版右端の基準値 */
+        left: auto;
+        transform: none;
+        display: flex;
+        gap: 31px;
+    }
+    .cRight {
+        text-align: center;
+        border-top: 1px solid #03A9F4;
+        height: 52px;
+        margin-top: 20px;
+        padding-top: 20px;
+        color: #fff;
+    }
+    small {
+        font-size: 12px;
+    }
+    /* トップへ戻るアイコン消す */
+    .toTopIcon {
+        display: none;
+    }
+/*ローディング*/
+/* 回転の動き */
+    .loading {
+        width: 100%;
+        height: 100vh;
+        /* 【確認】100vhに直す？ */
+        background-color: #007AB7;
+        /* 背景を青に */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* 👈 【追加】JavaScriptで opacity: 0 になったときに 0.5秒でフェードアウトさせる */
+        /* JavaScriptのsetTimeout(500)と一致させる */
+        transition: opacity 1.5s ease-in-out;
+        z-index: 9999;
+        /* 他のコンテンツの上に確実に表示 */
+        position: fixed;
+        /* 画面に固定 */
+        top: 0;
+        left: 0;
+    }
+    .loadingLogo {
+        width: 287px;
+        height: 117px;
+        margin: 0 auto;
+        animation: blink 3.5s infinite;
+        /* アニメーションを繰り返す */
+    }
+.pcProgress {
+    width: 0;
+    height: 100%;
+    background-color: black;
+}
+.pcProgress.go {
+    width: 100%;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+}
+
+
+
+
+
+
+
+
+
+/* 点滅アニメーション */
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    /* 見える */
+    50% {
+        opacity: 0;
+    }
+    /* 消える */
+    100% {
+        opacity: 1;
+    }
+    /* 見える */
+}
+
+
+
+
+}
