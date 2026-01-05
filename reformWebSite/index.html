@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- NotoSansJapaneseとNotoSerifJapaneseのgooglefonts使用 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Design House Renovations</title>
+</head>
+<!-- ここまでお決まり -->
+<body>
+    <!-- ヘッダーはロゴとハンバーガーメニュー -->
+    <header>
+        <h1 class="logodesign"><img src="images/logo_sp.svg" alt="ロゴ画像"></h1>
+        <nav class="gMenu">
+            <input class="menu-btn" type="checkbox" id="menu-btn">
+            <label class="menu-icon" for="menu-btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu">
+                <li><a href="#concept">コンセプト</a></li>
+                <li><a href="#service">サービス</a></li>
+                <li><a href="#flow">施工の流れ</a></li>
+                <li><a href="#qa">よくある質問</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <!-- これハンバーガメニューのコピペ -->
+    </header>
+    <main>
+<!-- ここはヒーロー画像だけの部分DIVとかは好きに入れて -->
+        <section class="heroArea">
+            <img src="images/hero3_big.png" alt="リビングのテーブルとイス">
+        </section>
+<!-- ここからコンセプトの部分 -->
+ <!-- フリガナはSPANにしてみる。ダメだったらPにする。 -->
+        <section id="concept" class="conceptArea">
+            <h2>
+                <span class="daimei">CONCEPT</span><span class="furigana">コンセプト</span>
+            </h2>
+            <h3 class="conceptSmile">
+                家族が笑顔になれる場所
+            </h3>
+            <p>
+                家族が集う、温かく居心地の良い空間づくりを目指して、
+                幅広い年代の方に安心して過ごしていただける空間づくりや、
+                お手入れのしやすい素材を使用したリフォームをご提案いたします。
+            </p>
+        </section>
+<!-- ここからサービスと浴室、リビング、キッチン。説明と画像は１セット。スマホなら縦、PC横並べ -->
+        <section id="service" class="serviceArea">
+            <h2>
+                <span class="daimei">SERVICE</span>
+                <span class="furigana">サービス</span>
+            </h2>
+<!-- 画像と説明を横並べするためのＤＩＶタグ -->
+            <div class="serviceAreaPC">
+                <article class="sampleService">
+                    <figure class="photo">
+                        <img src="images/list-1-img_sp.png" alt="浴槽の画像">
+                    </figure>
+                    <div class="explanation">
+                        <h3>浴室</h3>
+                        <p>ご家族が一緒に入れる広めの浴槽や手すり等、安全性に配慮しています。</p>
+                        <a class="moreArea" href="#"><span>more</span></a>
+                    </div>
+                </article>
+                <article class="sampleService">
+                    <figure class="photo">
+                        <img src="images/list-2-img_sp.png" alt="ソファーの画像">
+                    </figure>
+                    <div class="explanation">
+                        <h3>リビング</h3>
+                        <p>照明や家具の配置等、くつろぎやすい空間づくりを大切にしています。 </p>
+                        <a class="moreArea" href="#"><span>more</span></a>
+                    </div>
+                </article>
+                <article class="sampleService">
+                    <figure class="photo">
+                        <img src="images/list-3-img_sp.png" alt="流し台の画像">
+                    </figure>
+                    <div class="explanation">
+                        <h3>キッチン</h3>
+                        <p>機能性だけでなく、デザイン性にもこだわっております。</p>
+                        <a class="moreArea" href="#"><span>more</span></a>
+                    </div>
+                </article>
+            </div>
+        </section>
+<!-- フロー図のエリア。スマホは縦向き、ＰＣは横並べ。かつ三角マーク設置。設置方法考えておいて -->
+        <section id="flow" class="flowArea">
+            <h2>
+                <span class="daimei">FLOW</span>
+                <span class="furigana">施工の流れ</span>
+            </h2>
+            <div class="flowList">
+<!-- 本当はPではない方がいいらしいけど、直せないのでPで配置して作成 -->
+                <ul>
+                    <li>ご相談</li>
+                    <p class="redTri redTriOp60"></p>
+                    <li>現地調査</li>
+                    <p class="redTri redTriOp70"></p>
+                    <li>お見積り</li>
+                    <p class="redTri redTriOp80"></p>
+                    <li>ご契約</li>
+                    <p class="redTri redTriOp90"></p>
+                    <li>施工</li>
+                    <p class="redTri redTriOp100"></p>
+                    <li>お引渡し</li>
+                </ul>
+            </div>
+        </section>
+<!-- ここからQ＆Aのエリア -->
+        <section id="qa" class="qaArea">
+            <h2>
+                <span class="daimei">Q&A</span>
+                <span class="furigana">よくあるご質問</span>
+            </h2>
+<!-- ここからQとAのコンビのところ1個目 -->
+            <div class="qaWrap">
+                <div class="qaRow">
+                    <div class="qaBox qBoxOne">
+                        <div class="qaIcon q">
+                            <span class="iconText">Q.</span>
+                        </div>
+                        <div class="qaText">
+                            見積は無料ですか？
+                        </div>
+                    </div>
+                    <div class="qaBox">
+                        <div class="qaIcon a">
+                            <span class="iconText">A.</span>
+                        </div>
+                        <div class="qaText">
+                            はい。お見積りは無料で承っております。ホームページよりお気軽にお問いあわせください。
+                        </div>
+                    </div>
+                </div>
+                <div class="qaRow">
+                    <div class="qaBox">
+                        <div class="qaIcon q">
+                            <span class="iconText">Q.</span>
+                        </div>
+                        <div class="qaText">
+                            普段通り生活をしながらのリフォーム工事は可能ですか？
+                        </div>
+                    </div>
+                    <div class="qaBox">
+                        <div class="qaIcon a">
+                            <span class="iconText">A.</span>
+                        </div>
+                        <div class="qaText">
+                            はい。もちろん可能です。
+                            工事中の箇所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。
+                            大型リフォームの場合には、仮住まいもお薦めしております。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<!-- ここからフォームエリア -->
+        <section id="contact" class="formArea">
+            <h2>
+                <span class="daimei">CONTACT</span>
+                <span class="furigana">お問い合わせ</span>
+            </h2>
+                <form class="formBg" action="#" method="">
+                        <div class="formRow">
+                            <label class="label">
+                                お問い合わせ種別
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <div class="radio">
+                                <label>
+                                    <input class="radioButton" type="radio" name="kinds" value="資料請求">
+                                    <span class="radioText">資料請求</span>
+                                </label>
+                                <label>
+                                    <input class="radioButton" type="radio" name="kinds" value="ご相談">
+                                    <span class="radioText">ご相談</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="formRow">
+                            <label for="onamae" class="label">
+                                お名前
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <input class="inputField shortSize" id="onamae" type="text" name="name" value="">
+                        </div>
+                        <div class="formRow">
+                            <label for="onamaefurigana" class="label">
+                                フリガナ
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <input class="inputField shortSize" id="onamaefurigana" type="text" name="furigana" value="">
+                        </div>
+                        <div class="formRow">
+                            <label for="banngou" class="label">
+                                電話番号
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <input class="inputField shortSize" id="banngou" type="tel" name="tel" value="">
+                        </div>
+                        <div class="postFormRow formRow">
+                            <label for="address" class="label labelAddress">
+                                住所
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <div class="postFormPC">
+                                <label class="postForm">
+                                    <span class="postMark">〒</span>
+                                    <input class="inputField postCode" type="text" name="postcode" Value="">
+                                </label>
+                                <div class="addressForm">
+                                    <input class="inputField longSize"  id="address" type="text" name="address" Value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="formRow">
+                            <label for="mailaddress" class="label">
+                                メールアドレス
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <input class="inputField longSize" id="mailaddress" type="email" name="email" Value="">
+                        </div>
+                        <div class="formRow">
+                            <label for="kakuninaddress" class="label">
+                                メールアドレス(確認用)
+                                <span class="requireMark">必須</span>
+                            </label>
+                            <input class="inputField longSize" id="kakuninaddress" type="email" name="email" Value="">
+                        </div>
+                        <div class="formRow">
+                            <label for="textarea" class="label noReq">
+                                お問い合わせ内容
+                            </label>
+                            <textarea class="inquiryField longSize" id="textarea" name="message" rows="6"></textarea>
+                        </div>
+                        <div class="sendButton formRow">
+                            <input class="inputField sendCheck" type="submit" value="入力内容を確認する">
+                        </div>
+                </form>
+        </section>
+        <section class="linkMark">
+            <a href="#top" class="toTop"><p class="arrow_top"></p></a>
+        </section>
+    </main>
+    <!-- この下フッター -->
+    <footer>
+            <small>&copy; 2023 Design House Renovations</small>
+    </footer>
+</body>
+</html>
