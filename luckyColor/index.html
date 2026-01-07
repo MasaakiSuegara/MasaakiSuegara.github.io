@@ -75,12 +75,25 @@
 
         const rgba = `rgba(${redNum}, ${greenNum}, ${blueNum}, 1)`;
         document.getElementById('colorBox').style.backgroundColor =rgba;
-        document.getElementById('rgbaCode').textContent = rgba
+        document.getElementById('rgbaCode').textContent = rgba ;
+
+        const redHex = redNum.toString(16).padStart(2, '0').toUpperCase();
+        const greenHex = greenNum.toString(16).padStart(2, '0').toUpperCase();
+        const blueHex = blueNum.toString(16).padStart(2, '0').toUpperCase();
+
+        const hexCode = `#${redHex}${greenHex}${blueHex}`;
+        document.getElementById('rgbCode').textContent = hexCode ;
+
+
     };
     
     document.getElementById('rgbaPaste').onclick = function() {
         const rgbaPaste = document.getElementById('rgbaCode').textContent;
         navigator.clipboard.writeText(rgbaPaste);
+    }
+    document.getElementById('rgbPaste').onclick = function () {
+        const rgbPaste = document.getElementById('rgbCode').textContent;
+        navigator.clipboard.writeText(rgbPaste);
     }
     </script>
 
