@@ -10,15 +10,29 @@
     <link rel="stylesheet" href="styles/style.css">
     <title>テンプレート</title>
 </head>
-<body>
+<body class="bgColor" id="bgColor">
     <main>
         <div class="colorRandom">
             <p class="colorEx">ランダムにカラー設定</p>
-            <div class="colorBox" id="colorBox"></div>
+            <div class="colorBox" id="colorBox"></div><div class="todayBlock">
+            <p class="todayColor">透明度</p>
+                <select  name="opocity" id="opocity" class="passion">
+                    <option value="1.0">1.0</option>
+                    <option value="0.9">0.9</option>
+                    <option value="0.8">0.8</option>
+                    <option value="0.7">0.7</option>
+                    <option value="0.6">0.6</option>
+                    <option value="0.5">0.5</option>
+                    <option value="0.4">0.4</option>
+                    <option value="0.3">0.3</option>
+                    <option value="0.2">0.2</option>
+                    <option value="0.1">0.1</option>
+                    <option value="0">0</option>
+                </select>
+        </div>
             <button id="cButton" class="colorButton">スタート</button>
             <p class="colorEx">カラーコード<br>RED・GREEN・BLUE</p>
         </div>
-
         <div class="rgb">
             <p id="redBox" class="numberBox"></p>
             <p id="greenBox" class="numberBox"></p>
@@ -30,37 +44,16 @@
                 <button class="rgbaPaste" id="rgbaPaste">コピー</button>
             </div>
             <div class="rgbBlock">
-                <p class="rgbCode" id="rgbCode">#(10→16の変換作る)(未実装)</p>
+                <p class="rgbCode" id="rgbCode">rgbカラーコード</p>
                 <button class="rgbPaste" id="rgbPaste">コピー</button>
             </div>
-        </div>
-        
-        <div class="todayBlock">
-            <p class="todayColor">今日の気分(未実装)</p>
-            <p class="passion">
-                <select  name="passion" id="passion">
-                    <option value="普通">普通</option>
-                    <option value="良い">良い</option>
-                    <option value="沈む">沈む</option>
-                </select>
-            </p>
-        </div>
-        <div class="memo">
-            <ol>
-                <li>課題点および改善点のメモ</li>
-                <li>10進数から16進数の変換式を作って#版のカラーコードをコピペできるように</li>
-                <li>普通はランダム。良いは数値を高く。沈むは低い数値<br>気分を参照して色のランダム性の変化したい。</li>
-                <li></li>
-            </ol>
         </div>
     </main>
     
     <script>
-        'use strict';
-
+    'use strict';
     document.getElementById('cButton').onclick = function () {
         console.log('カラーナンバー')
-
         const redNum = Math.floor(Math.random() * 256);
         console.log(redNum);
         document.getElementById('redBox').textContent = redNum;
@@ -73,9 +66,14 @@
         console.log(blueNum);
         document.getElementById('blueBox').textContent = blueNum;
 
-        const rgba = `rgba(${redNum}, ${greenNum}, ${blueNum}, 1)`;
+        //透明度の取得
+        const opo = document.getElementById("opocity").value;
+
+        const rgba = `rgba(${redNum}, ${greenNum}, ${blueNum}, ${opo})`;
         document.getElementById('colorBox').style.backgroundColor =rgba;
         document.getElementById('rgbaCode').textContent = rgba ;
+        const bgrgba = `rgba(${redNum}, ${greenNum}, ${blueNum}, 0.5)`;
+        document.getElementById('bgColor').style.backgroundColor = bgrgba ;
 
         const redHex = redNum.toString(16).padStart(2, '0').toUpperCase();
         const greenHex = greenNum.toString(16).padStart(2, '0').toUpperCase();
@@ -83,8 +81,6 @@
 
         const hexCode = `#${redHex}${greenHex}${blueHex}`;
         document.getElementById('rgbCode').textContent = hexCode ;
-
-
     };
     
     document.getElementById('rgbaPaste').onclick = function() {
@@ -96,6 +92,5 @@
         navigator.clipboard.writeText(rgbPaste);
     }
     </script>
-
 </body>
 </html>
