@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+body {
+    background-color: #4cf570;
+    font-family: "M PLUS 1", 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    width: 375px;
+    margin: 0 auto;
+}
+
+.fuku {
+    background-color: #fff;
+    border :1px solid #000;
+    font-size:30px;
+    text-align:center;
+    width:300px;
+    margin:30px auto;
+}
+.omikuzi {
+    background-color:#fff; 
+    border :1px solid #000;
+    font-size:30px;
+    text-align:center;
+    width:300px;
+    height:40px;
+    margin:30px auto;
+}
+
+.textBox {
+    background-color:#fff; 
+    border :1px solid #000;
+    font-size:15px;
+    text-align:center;
+    width:350px;
+    margin:30px auto;
+}

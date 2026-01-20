@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- NotoSansJapaneseとNotoSerifJapaneseのgooglefonts使用 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>おみくじ_ポートフォリオ</title>
+</head>
+<body>
+    <h1 class="fuku">おみくじ<br> JavaScript編</h1>
+    <p  class="omikuzi" id="fungyaro">フンギャロ</p>
+
+    <h1 class="fuku">おみくじ<br> PHP編</h1>
+    <p class="omikuzi" id="honnyaka">ホンニャカ</p>
+
+    <h1 class="fuku">おみくじ<br> MySQL編</h1>
+    <p class="omikuzi" id="tyoayo">チョアヨ</p>
+    <p class="omikuzi" id="baseyo">一言</p>
+
+    <p class="textBox">上はJavaScript内でのおみくじの抽選<br>
+    下はPHP経由のおみくじの抽選です。<br>クリックすると結果が出ます。</p>
+    
+
+    <script>
+        let omikuziList = ["大吉","中吉","中吉","吉","吉","吉","小吉","小吉","小吉","末吉","末吉","凶","大凶","超吉"];
+        function lucky(kuzi,box) {
+            if  (kuzi === '超吉') {
+               box.style.backgroundColor = '#EFF72B'; 
+            } else if (kuzi !== '超吉') {
+                box.style.backgroundColor = '#fff';
+            };
+        };
+        //JavaScript内でおみくじを引く
+        fungyaro.onclick = function() {
+            const result = Math.floor(Math.random()*omikuziList.length);
+            console.log('JS版結果は:'+ omikuziList[result]);
+            lucky(omikuziList[result],fungyaro);
+            document.getElementById('fungyaro').textContent = omikuziList[result];
+        };
+        //PHPファイルにおみくじをひかせて結果を取得する。
+        honnyaka.onclick = function () {    
+            fetch('fortune.php')
+            .then(response => response.json())
+            .then(data => {
+            document.getElementById('honnyaka').textContent = data.運勢;
+            lucky(data.運勢,honnyaka);
+            console.log('PHP版結果は:'+ data.運勢);
+            })
+            .catch(error => {
+            honnyaka.textContent = 'エラーです。'
+            });
+        };
+        //引いたくじとデータベースを照合してデータを持ってくる。
+        tyoayo.onclick = function () {    
+            fetch('fortune-SQL.php')
+            .then(response => response.json())
+            .then(data => {
+            document.getElementById('tyoayo').textContent = data.luck;
+            document.getElementById('baseyo').textContent = data.kuzi;
+            lucky(data.luck,tyoayo);
+            console.log('MySQL版結果は:'+ data.luck);
+            console.log('一言メモ:'+ data.kuzi);
+            })
+            .catch(error => {
+            honnyaka.textContent = 'エラーです。'
+            });
+        };
+    </script>
+</body>
+</html>
