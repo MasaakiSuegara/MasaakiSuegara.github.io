@@ -2,87 +2,368 @@
 
 body {
     background-color:#4cf570 ;
-    font-family:"M PLUS 1", 'Noto Sans JP', sans-serif;
+    color:#181820;
+    font-family:"DotGothic16", 'Noto Sans JP', sans-serif;
     font-size: 14px;
-    width: 375px;
     margin: 0 auto;
+    max-width: 820px;
+    letter-spacing:0.1em;
 }
+
 section {
-    border : 4px double #000;
+    border : 2px solid #181820;
+    padding: 12px;           /* 追加 */
+    margin-bottom: 16px;     /* 追加 */
 }
-h1 {
-    font-family :"DotGothic16", 'Noto Sans JP', sans-serif; ;
-    font-size:18px;
-    border: 3px solid #ffffff;
-    border-radius: 20px;
-    /* paddingは枠内の文字の位置を示す。 */
-    padding: 6px 0;
-    margin: 20px auto;
 
-    text-align: center;
+.article {
+    font-size:24px;
 }
-h2 {
+.subArticle {
+    font-size:20px;
+}
+.sentenceArticle {
+    font-size:16px;
+    color:#c02020;
+}
+.schoolCreate {
+    background-color:#E89DE1 ;
+}
+.selfCreate {
+    background-color: #F7A737;
+}
+.card-link {
+    font-size:16px;
+    color:#c02020;
+    border-bottom:1px solid #c02020 ;
+}
+
+/*サイトのトップ部分(ヘッダー) */
+header {
+    border:2px solid #181820;
+    background-color: #f0e8c0;
+    margin:20px auto ;
+    padding:20px;
+}
+.hTitle {
+    font-size:28px;
+    font-weight:bold;
+    text-align: center;
+    border: 2px solid #181820;
+    margin-bottom:20px ;
+}
+.hBlock {
+    display:flex;
+    justify-content: space-between;
+    gap:30px
+}
+.hLeft {
+    display:block;
+}
+.hRight {
+    display:flex;
+    border: 2px solid #181820;
+    margin-right: 20px;
+    justify-content: space-around;
+    align-items: center;
+    gap: 8px;                /* 追加 */
+    padding: 8px;            /* 追加 */
+}
+.wIcon {
+    width:60px;
+    height: 60px;
+}
+
+/*  スキルの箇所*/
+.skillTitle {
+    text-align: center;
+    margin-bottom: 10px;
+}
+.skillBlock{
+    display:grid;
+    grid-template-columns:48% 48% ;
+    gap:4%;
+    margin-bottom:20px;
+    background-color:#f5f5dc;
+}
+.skillWindow {
+    background-color:#f5f5dc;
+    border:2px solid #181820;
+    padding: 10px;
+}
+.skillList {
+    display:flex;
+    justify-content: space-evenly;
     font-size: 14px;
-    border: 2px solid #ffffff;
-    border-radius: 20px;
-    /* paddingは枠内の文字の位置を示す。 */
-    padding: 6px 0;
-    margin: 20px auto;
-
-    text-align: center;
+    margin-bottom: 10px;
 }
-h3 {
-    font-size: 12px;
-    border: 1px solid #ffffff;
-    border-radius: 20px;
-    /* paddingは枠内の文字の位置を示す。 */
-    padding: 6px 0;
-    margin: 20px auto;
- 
-    text-align: center;
+.skill {
+    border:1px solid #181820;
+    background-color: #f0e8c0;
+    display:block;
+    padding:10px;
 }
-p,ul {
-    text-align: center;
+.jobSkillList {
+    display:flex;
+    justify-content: space-evenly;
+    font-size: 14px;
+    margin-bottom: 10px;
+    gap:5px;
+}
+.jobSkill {
+    border:1px solid #181820;
+    background-color: #f0e8c0;
+    display:block;
+    padding:5px 2px 5px 2px;           /* 追加 */
+    font-size:10px;
+}
+.cardLabel {
+    display:flex;
+    border:2px solid #181820;
+    background-color:#f0e8c0;
+    position:relative;
+    align-items: center;     /* 追加 */
+    padding: 8px 10px;       /* 追加 */
+    gap: 8px;                /* 追加 */
+}
+.cardExp {
+    padding: 4px 10px;
+    margin-left: auto;
+    white-space: nowrap;
+    padding: 4px 10px;
+    margin-left: auto;       /* 右端に寄せる */
+    white-space: nowrap;     /* 追加：折り返し防止 */
+}
+.schoolBlock {
+    margin-bottom: 20px;
+    background-color:#f5f5dc;
+}
+.selfBlock {
+    margin-bottom: 20px;
+    background-color:#f5f5dc;
+}  
+/* EXPのブロック */
+.expBlock {
+    border:2px solid #181820;
+    background-color:#f5f5dc;
     margin-bottom: 20px;
 }
+.expLabel {
+    background-color:#D4EB20 ;
+    border:2px solid #181820;
+}
+.cardExp {
+    background-color:#D4EB20 ;
+    font-size:18px;
+    font-weight:bold;
+}
+.gettedExp {
+    background-color:#c0c0c0 ;
+}
 
-a {
-    background-color: #f5f5dc;
+/*経験値 開閉メニュー関係の修飾 */
+
+.cardBody {
+    /* display:none;   */
+    max-height:0;
+    transition:max-height 500ms ease 0ms;
+    overflow: hidden;
+    border:2px solid #181820;      /* 追加 */
+    background-color:#f5f5dc;      /* 追加 */
+}
+.cardText {
+    padding: 0 16px 8px 16px;   /* 追加 */
+}
+.cardView {
+    padding: 8px 16px 0 16px;   /* 追加 */
+}
+.card-links {
+    padding: 8px 16px 16px 16px;   /* 追加 */
+}
+.show {
+    max-height:1000px;  
+}
+.status {
+    display:flex;
+    gap:15px;
+    text-align: center;
+}
+.expCharge {
+    display:flex;
+    gap:15px;
+    text-align: center;
+}
+.expGaugeFlame {
+    width:100%;
+    max-width:640px;
+    height:30px;
+    border: 2px solid #D4EB20;
+    background-color: #c0c0c0;
+}
+.expGauge {
+    height: 100%;
+    width: 0%;
+    background-color: #81F9D4; /* 伸びる部分の色 */
+    transition:width 500ms ease 0ms;
+}
+.powerLv {
+    display: flex;
+    gap:15px;
+    text-align: center;
+}
+.lvButton {
+    border:2px solid #181820;
+    background-color: #c0c0c0;
+    padding:2px;
+}
+
+/* ゲーム部分 */
+.gameBlock {
+    border:2px solid #181820;
+    background-color:#f5f5dc;
+}
+.gameLabel  {
+    border:2px solid #181820;
+    background-color: #81F9D4;
+}
+.gameWindow {
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+.charaGra {
+    width:100px;
+    height:100px;
+    transition:img 500ms ease 0ms;
+}
+.chara {
+    text-align: center;
+}
+.versus {
+    font-size:32px;
+    font-weight: bold;
+    margin:auto 40px;
+}
+.playerGaugeFlame{
+    width:100%;
+    max-width:200px;
+    height:30px;
+    border: 2px solid #181820;
+    background-color: #c0c0c0;
+}
+.playerGauge {
+    height: 100%;
+    width: 100%;
+    background-color:#00bfff ; /* 残りHP */
+    transition:width 500ms ease 0ms;
+    /* text-align: center; */
+}
+
+/* ゲージ固定のためついか。個別に隔離 */
+.playerGaugeFlame, .enemyGaugeFlame {
+    position: relative;
+}
+.playerGauge, .enemyGauge {
+    position: static; /* ← absoluteの基準にさせない */
+}
+.gaugeFlex {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    z-index: 1;
+}
+
+
+.enemyGaugeFlame{
+    width:100%;
+    max-width:200px;
+    height:30px;
+    border: 2px solid #181820;
+    background-color: #c0c0c0;
+}
+.enemyGauge {
+    height: 100%;
+    width: 100%;
+    background-color: #ffff00; /* 残りHP */
+    transition:width 500ms ease 0ms;
+    align-self: center;
+}
+
+
+.messageWindow {
+    border:2px double #181820;
+    height:200px;
+    margin:20px;
+    white-space: pre-wrap;
+    overflow : hidden scroll;
+}
+/* ゲームウインドウらしく点滅させる。 */
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blinking {
+  animation: blinking 1s steps(1, end) infinite;
+}
+.battleButton {
+    display:flex;
+}
+
+.battleStart,.battleReset,.turnStart{
+    border:2px solid #181820;
+    background-color:#E6A417;
     display: block;
-    padding: 20px 0;
-    border-radius: 4px;
-    color: #000;
+    width:200px;
+    height:50px;
+    margin:20px auto ;
+    text-align: center;
+    font-size: 20px;
     font-weight: bold;
 }
-ul {
-
-    margin: 0 auto;
-}
-li {
-    margin-bottom: 20px;
+.battleStart:hover {
+   background-color: #c0c0c0;
+   transition:all 300ms ease-in 0ms;
 }
 
-.wIcon {
-    width:15vw;
-    height:15vw;
-        border-radius: 50%;
+/* 敗北時倒れる演出 */
+.defeatPose {
+    transform:rotate(-90deg);
+    transition: transform 500ms ease-in 0ms;
 }
 
-@media screen and (min-width:768px){
+
+@media screen and (max-width:768px){
 
     body {
-        width : 60vw;
-        margin:0 auto;
+        width:375px;
+        font-size:12px;
     }
-    .createArea {
-        display:flex;
-    }
-    .create {
-        width : 30vw;
-    }
-    .grow {
-        width:30vw;
-    }
+
+/*  */
+.skillBlock{
+    display:block;
+
+    margin-bottom:20px;
+}
+.skillWindow {
+    background-color:#f5f5dc;
+    border:2px solid #181820;
+}
+.skillList {
+    display:flex;
+    gap:10px;
+}
+
 
 
 }

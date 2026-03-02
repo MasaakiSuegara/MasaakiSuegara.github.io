@@ -11,93 +11,287 @@
     <title>ポートフォリオ_末柄</title>
 </head>
 <body>
-    <main>
-        <div class="welcomeArea">
-            <h1>ポートフォリオ 末柄 祐明</h1>
-            <section>
-                <h2>自己紹介</h2>
-                <p>メイン画像(仮)</p>
-                <div class="selfPortrait">
-                    <img class="wIcon" src="image/character_shakaijin_man_01_gray_black.svg" alt="自画像代理">
-                    <img class="wIcon" src="image/arrowRight.png" alt="矢印">
-                    <img class="wIcon" src="image/character_mahotsukai_02_black.svg" alt="成長した後">
-                    <a href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io.git" target="_blank">Githubリンク</a>
+    <!-- ヘッダーは見出し。タイトルとこのサイトのコンセプト説明 -->
+    <header>
+        <h1 class="hTitle">ポートフォリオ</h1>
+        <div class="hBlock">
+            <div class="hLeft">
+                <div class="hName article"> 末柄 祐明</div>
+                <div class="hJob">JOB CHANGE：製造・品質保証 → Web Engineer</div>
+                <div class="hCatchCopy">
+                    食品メーカーで8年、製造・品質保証に加え<br>
+                    帳票DX（110帳票の電子化）を設計から定着まで一人で担当。<br>
+                   「現場の課題を仕組みに変える」経験を土台に、<br>
+                    実装力を持つエンジニアを目指してキャリアチェンジ。
                 </div>
-            </section>
+            </div>
+            <div class="hRight">
+                    <img class="wIcon" src="images/character_shakaijin_man_01_gray_black.svg" alt="自画像代理">
+                    <img class="wIcon" src="images/rightArrow.svg" alt="矢印">
+                    <img class="wIcon" src="images/character_mahotsukai_02_black.svg" alt="成長した後">
+            </div>
         </div>
-        <div class="createArea">
-            <section class="create">
-                <img class="getItem" src="image/book_03_red.svg" alt="勉強したこと">
-                <h2>自分の授業の作成物</h2>
-                <p><a href="reformWebSite/index.html" target="_blank">WEBサイト制作演習1回目</a></p>
-                <p><a href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/reformWebSite" target="_blank">1回目Githubリンク</a></p>
-                <p>かかった時間<br>45時間</p>
-                <p>使用言語:HTML,CSS</p>
-                <p><span>工夫した点:</span>divタグでブロックの区切りを意識しレスポンシ対応を行い易くなるよう意識しました。</p>
-                <p><span>苦労した点:</span>フォームエリアのようなサイズの異なるブロックの配置とサイズの調整に軟膏しました。<br>
-                divタグ同士の配置関係がすべてつながっているため、配置が一つずれると全体に影響が及ぶ状態になった点も苦労点</p>
+    </header>
+    <!-- メインは4セクション。1.スキル2.制作物3.自作物4.ゲーム作成(ポートフォリオ制作物) -->
+    <main>
+        <!-- 一つめ。スキルに関して記述する。 -->
+        <section class="skillBlock">
+            <div class="skillWindow">
+                <p class="skillTitle article">▶ 経験した言語・スキル</p>
+                <div class="skillList">
+                    <span class="skill">HTML</span>
+                    <span class="skill">CSS</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">PHP</span>
+                    <span class="skill">MySQL</span>
+                </div>
+                <div class="skillMemo">基礎の習得</div>
+            </div>
+            <div class="skillWindow">
+                <p class="skillTitle article">▶ 前職のスキル・強み</p>
+                <div class="jobSkillList">
+                    <span class="jobSkill">要件整理・運用設計</span>
+                    <span class="jobSkill">品質保証・監査対応</span>
+                    <span class="jobSkill">マニュアル・標準化</span>
+                    <span class="jobSkill">現場教育・定着支援</span>
+                    <span class="jobSkill">不具合調査・改善</span>
+                </div>
+                <div class="jobSkillMemo">DX化主導</div>
+            </div>
+        </section>
+            <!-- ２番目訓練校での制作物。３つ＋卒業制作。制作物と工夫したところ、苦労したところとかかった時間 -->
+        <section class="schoolBlock">
+            <h2 class="schoolCreate article">▶ 訓練課題（HTML / CSS / JavaScript / PHP / MySQL）</h2>
+            <!-- １個目リフォームサイト -->
+            <div class="cardCreate">
+                <div class="cardLabel" id="label1">
+                    <span class="triMark" id="triMark1">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">HTML,CSSを用いたリフォームサイト制作</p>
+                        <p>かかった時間：45時間</p>
+                    </div>
+                    <span class="cardExp" id="expRF">+80Exp</span>
+                </div>
+                <!-- アコーディオンメニューの位置。 -->
+                <div class="cardBody" id="toggle1" >
+                    <p class="cardView sentenceArticle">▷ 概要</p>
+                    <p class="cardText">HTMLとCSSのみで構成したWebサイト。レスポンシブ対応を初めて意識した課題。</p>
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">divタグでブロックを明確に区切り、レスポンシブ対応がしやすい構造を意識した。</p>
+                    <p class="cardView sentenceArticle">▷ 苦労した点</p>
+                    <p class="cardText">サイズの異なるブロックの配置調整に苦労。div同士の配置はすべてつながっているため、一箇所のズレが全体に影響する点を学んだ。</p>
+                    <div class="card-links">
+                        <a class="card-link" href="reformWebSite/index.html" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/reformWebSite" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 2個目台湾サイト -->
+            <div class="cardCreate">
+                <div class="cardLabel ">
+                    <span class="triMark" id="triMark2">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">JavaScriptをメインに台湾観光サイト制作(グループワーク)</p>
+                        <p>かかった時間：45時間×4人</p>
+                    </div>
+                    <span class="cardExp" id="expTW">+80Exp</span>
+                </div>
 
-                <p><a href="taiwanTravelWebSite/index.html" target="_blank">WEBサイト制作演習2回目</a></p>
-                <p><a href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/taiwanTravelWebSite" target="_blank">2回目Githubリンク</a></p>
-                <p>かかった時間<br>45時間 ✕ 4人</p>
-                <p>使用言語:HTML.CSS,JavaScript</p>
-                <p><span>工夫した点:</span>セクションごとに個別で縦幅を設定した事で、配置のズレがセクション内で収まり、レイアウトのズレを抑えることができた。<br>
-                スライダーを画像の並びの移動ではなく配列の差し替えにすることで拡張性を担保したスライダーを作成できた。<br>
-                ドロワーとフッターの共通部分を作成し共有した。(まだ不完全だが,CSSの継承や優先度に依存せず該当箇所のコピペで反映できるようにした)</p>
-                <p><span>苦労した点:</span>共有部分のブロック化が不完全。bodyタグの修飾に依存した修飾もあり、それぞれの記述状態に依存した状態だった。<br>
-                スライダーが不完全。早めに相談し、画像を配列化、入れ替えまではできたがそのあとの端の画像の削除、画像のスライド、移動までうまくできなかった。</p>
+                <div class="cardBody">
+                    <p class="cardView sentenceArticle">▷ 概要</p>
+                    <p class="cardText">台湾旅行をテーマにした4人グループ制作。スライダー・ドロワーメニュー・フッターの共通パーツ化を担当した</p>
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">セクションごとに縦幅を個別設定してレイアウトのズレをセクション内に封じた。スライダーは画像移動でなく配列差し替え方式にして拡張性を確保した。</p>
+                    <p class="cardView sentenceArticle">▷ 苦労した点</p>
+                    <p class="cardText">共有パーツのブロック化が不完全でbodyタグへの依存が残った。スライダーの端処理・アニメーションが完成できず、チームでの分担・相談の難しさを実感した。</p>
+                    <div class="card-links">
+                        <a class="card-link" href="taiwanTravelWebSite/index.html" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/taiwanTravelWebSite" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- ３個目ドーナツ通販サイト -->
+            <div class="cardCreate">
+                <div class="cardLabel">
+                    <span class="triMark" id="triMark3">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">PHP,MySQLをメインにしたCCドーナツ通販サイト制作</p>
+                        <p>かかった時間：60時間</p>
+                    </div>
+                    <span class="cardExp" id="expCC">+100Exp</span>
+                </div>
+                <div class="cardBody">
+                    <p class="cardView sentenceArticle">▷ 概要</p>
+                    <p class="cardText">PHPとMySQLを使った架空のショッピングサイト。DB連携・サーバー公開まで行った実践的な課題。</p>
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">バックエンドとフロントの連携を意識した設計。DBを使ったデータ表示・送受信の基本的な流れを実装した。</p>
+                    <p class="cardView sentenceArticle">▷ 苦労した点</p>
+                    <p class="cardText">サーバー環境の設定やPHPとHTMLが混在する記述に慣れるまで時間がかかった。エラーの原因特定を繰り返し、デバッグの考え方を身につけた。</p>
+                    <div class="card-links">
+                        <a class="card-link" href="ccdonuts_XREAuploadFolder/ccdonuts/index.php" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="selfBlock">
+        <!-- 自分で作った制作物を掲示するブロック -->
+            <h2 class="selfCreate article">▶ 自主制作物</h2>
+            <div class="cardCreate">
+                <div class="cardLabel">
+                    <span class="triMark" id="triMark4">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">JavaScriptを用いた電卓の作成</p>
+                        <p>かかった時間：5時間</p>
+                    </div>
+                    <span class="cardExp" id="expDT">+80Exp</span>
+                </div>
+                <div class="cardBody">
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">演算子を入力すると自動で式の右辺入力モードに切り替わるよう実装した。</p>
+                    <p class="cardView sentenceArticle">▷ 現状</p>
+                    <p class="cardText">基本的な四則演算は動作。演算の優先順位処理など追加実装を継続中。</p>
+                    <div class="card-links">
+                        <a class="card-link" href="calculatorJS/index.html" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/calculatorJS" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- カラーコード -->
+             <div class="cardCreate">
+                <div class="cardLabel">
+                    <span class="triMark" id="triMark5">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">ランダムカラーコード</p>
+                        <p>かかった時間：3時間</p>
+                    </div>
+                    <span class="cardExp" id="expRC">+80Exp</span>
+                </div>
+                <div class="cardBody">
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">ポートフォリオデザイン中、カラー決定のため作成した。同時にランダム生成のプログラムの学習を目的として作成した。</p>
+                    <p class="cardView sentenceArticle">▷ 現状</p>
+                    <p class="cardText">基本的な四則演算は動作。演算の優先順位処理など追加実装を継続中。</p>
+                    <div class="card-links">
+                        <a class="card-link" href="luckyColor/index.html" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/luckyColor" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- くじ引き -->
+             <div class="cardCreate">
+                <div class="cardLabel">
+                    <span class="triMark" id="triMark6">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">くじ引き</p>
+                        <p>かかった時間：4時間</p>
+                    </div>
+                    <span class="cardExp" id="expFT">+100Exp</span>
+                </div>
+                <div class="cardBody">
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">HTML,JavaScript,phpそれぞれで同じ結果を出力するものの書き分けを学ぶこと。同時にWebサイトで取得したデータを
+                    データ保存して活用するための方法の学習を目的として作成した。</p>
+                    <p class="cardView sentenceArticle">▷ 現状</p>
+                    <p class="cardText">余裕を作ってくじにおもみをつけて当選確率を調整したい</p>
+                    <div class="card-links">
+                        <a class="card-link" href="fukutameshi/index.html" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/luckyColor" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 進数変換と素数検出 -->
+             <div class="cardCreate">
+                <div class="cardLabel">
+                    <span class="triMark" id="triMark7">▼</span>
+                    <div class="cardTitle">
+                        <p class="subArticle">進数変換・素数検出</p>
+                        <p>かかった時間：作成中</p>
+                    </div>
+                    <span class="cardExp" id="expNC">+80Exp</span>
+                </div>
+                <div class="cardBody">
+                    <p class="cardView sentenceArticle">▷ 工夫した点</p>
+                    <p class="cardText">作成中</p>
+                    <p class="cardView sentenceArticle">▷ 現状</p>
+                    <p class="cardText">作成中</p>
+                    <div class="card-links">
+                        <a class="card-link" href="" target="_blank">▷ デモを見る</a>
+                        <a class="card-link" href="" target="_blank">▷ GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 自分で作った制作物を掲示するブロック -->
+        <section class="expBlock">
+            <h2 class="expLabel article">▶ Exp ― 経験値</h2>
+            <div class="status">
+                <p class="lv" id="lv">Lv</p>
+                <p class="lvNum" id="currentLv">1</p>
+                <p class="lvClass" id="currentClass">未経験</p>
+            </div>
+            <div class="expCharge">
+                <p>exp</p>
+                <p><span id="currentExp">0</span>/ 600</p>
+            </div>
+            <div class="expGaugeFlame">
+                <div class="expGauge" id="expGauge"></div>
+            </div>
+            <p class="expRule">
+                制作物を見ていくとExp(経験値)が手に入り、レベルアップしていきます。
+            </p>
+            <div class="powerLv">
+                <p>レベルマックスとレベルリセット(機能確認したい方用)</p>
+                <button class="lvButton" id="maxLv">maxLv化</button>
+                <button class="lvButton" id="resetLv">Lvリセット</button>
+            </div>
+        </section>
 
-            </section>
-            <section class="grow">
-                <img class="getItem" src="image/tsue.svg" alt="作ったもの">
-                <h2>授業外の制作物</h2>
-                <h3>備忘録</h3>
-                <p><a href="memorandum/index.html" target="_blank">過去に作った備忘録</a></p>
-                <h3>制作物(授業の応用課題含む)</h3>
-                <p><a href="calculatorJS/index.html" target="_blank">電卓</a></p>
-                <p><a href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/calculatorJS" target="blank">電卓Githubリンク</a></p>
-                <p>使用言語:HTML.CSS,JavaScript(かかった時間５時間)</p>
-                <p><span>工夫した点:</span>演算子を入れると自動的に式の右側の入力になるように作成した。</p>
-                <p><span>苦労した点:</span>まだ未完成</p>
-
-                <p><a href="binaryConvert/index.html" target="_blank">進数の変換公式(予定)</a></p>
-
-                <p><a href="primaryNumber" target="_blank">素数検出式(予定)</a></p>
-
-                <p><a href="luckyColor/index.html" target="_blank">ランダムカラーコード</a></p>
-                <p><a href="https://github.com/MasaakiSuegara/MasaakiSuegara.github.io/tree/main/luckyColor" target="blank">カラーコードGithubリンク</a></p>
-                <p>使用言語:HTML.CSS,JavaScript(かかった時間４時間)</p>
-                <p><span>工夫した点:</span></p>
-                <p><span>苦労した点:</span></p>
-
-            </section>
-        </div>
-        <div class=appealArea>
-            <section class="career">
-                <img class="getItem" src="image/map_beige.svg" alt="過去の経歴、技能">
-                <h2>自分の来歴、経歴、PRポイント</h2>
-                <p>まだ制作中...</p>
-                <h3>取得資格及び勉強中の資格</h3>
-                <p>取得資格：普通自動車免許(MT)、ITパスポート</p>
-                <p>勉強中資格：基本情報資格者試験、QC検定3級</p>
-            </section>
-        </div>
-        <ol>
-            <li>課題点および改善点のメモ</li>
-            <li>デザインはシンプルに直線と曲線→イメージは16bitとドット(仮)</li>
-            <li>例えば初期状態は何もしらない装備していない。</li>
-            <li>別の職の経験がある→転職→ジョブチェンジ</li>
-            <li>講義は頭脳、勉強は武器、経歴は地図、目標モンスターー</li>
-            <li>例えばワンポイントに配置してみる。</li>
-        </ol>
+        <section class="gameBlock">
+            <h2 class="gameLabel article">▶ ゲーム部分</h2>
+            <p>ゲーム説明 ：ポートフォリオの作成物を閲覧すると経験値が入手できます。<br>
+            経験値をためて敵を倒そう。
+            </p>
+            <!-- キャラ並べるdiv -->
+            <div class="gameWindow">
+               <div class="chara player">
+                    <div><img class="charaGra" id="player" src="images/character_shakaijin_man_01_gray_black.svg" alt="プレイヤー画像"></div>
+                    <p>作者 lv.<span id="playerLv">1</span></p>
+                    <div class="playerGaugeFlame">
+                        <div class="playerGauge" id="playerGauge">
+                            <div class="gaugeFlex">
+                                <div>
+                                    <span id="playerHp">30</span>/ <span id="playerMaxHp">30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="versus">V.S</div>
+                <div class="chara enemy">
+                    <div><img class="charaGra" id="enemy" src="images/pc_desktop.svg" alt="エネミー画像"></div>
+                    <p>習得の壁 lv.5 </p>
+                    <div class="enemyGaugeFlame">
+                        <div class="enemyGauge" id="enemyGauge">
+                            <div class="gaugeFlex">
+                                <span id="enemyHp">100</span>/ <span id="enemyMaxHp">100</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="messageWindow" id="messageWindow">メッセージウインドウ。ここに戦いの履歴が残ります。<span class="blinking">＿</span></div>
+            <div class="battleButton">
+                <button class="battleStart" id="battleStart">オートバトル(ver1)</button>
+                <button class="turnStart" id="turnStart">ターンバトル(ver2)</button>
+                <button class="battleReset" id="battleReset">バトルリセット</button>
+            </div>
+        </section>
     </main>
+    <!-- 画像提供やCマーク -->
     <footer>
         <p><small>CopyRight (C) MasaakiSuegara</small></p>
         <p><small>画像提供：DOT ILLUST 様(https://dot-illust.net/)</small></p>
     </footer>
-
-    
-<script src="common/jquery-3.7.1.min.js"></script>
-<script src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
-</html>
