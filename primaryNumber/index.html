@@ -8,25 +8,64 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/style.css">
-    <title>電卓_ポートフォリオ</title>
+    <title>進数、素数検出_ポートフォリオ</title>
 </head>
 <body>
+    <header>
+        <h1 class="title">数字の変換計算</h1>
+        <p class="titleName">進数変換/素数の判定/因数分解</p>
+    </header>
     <main>
-        <div class="tencahnge">
-            <p>素数の変換</p>
+        <div class="baseBlock">
+            <p class="baseLabel">変換したい数を入力し、その数が何進数か選択してください。</p>
+            <p class="baseMessage" id="baseMessage">半角英数字を入力してください。(16進数は大文字で入力してください)</p>
+            <input type="text" id="baseInput" class="baseInput" value="" placeholder="半角英数字を入力してください。">
+            <div class="fromBaseFlex">
+                <select class="fromBase" id="fromBase">
+                    <option value="2">2進数</option>
+                    <option value="10">10進数</option>
+                    <option value="16">16進数</option>
+                </select>
+                <button class="baseConvert" id="baseConvert">変換</button>
+            </div>
         </div>
-        <div>
-            <p>変換したい数</p>
-            <div></div>
-            <p>検出された素数</p>
-            <div></div>
+        <div class="baseResults">
+            <div class="baseCard b2">
+                <div class="baseLabel">2進数</div>
+                <div class="basearVvalue" id="base2">—</div>
+            </div>
+            <div class="baseCard b8">
+                <div class="baseLabel">10進数</div>
+                <div class="baseValue" id="base10">—</div>
+            </div>
+            <div class="baseCard b16">
+                <div class="baseLabel">16進数</div>
+                <div class="baseValue" id="base16">—</div>
+            </div>
+        </div>
 
+
+        <div class="primeBlock">
+            <div class="primeFlex">
+                <p class="primeLabel">素数か判定したいを入力してください。</p>
+                <p class="primeMessage">半角で自然数を入力してください。</p>
+                <input type="text" id="primeInput" class="primeInput" value="" placeholder="自然数を入れる。">
+                <!-- 素数を掲載する上限 -->
+                <p class="primeLabel">検出したい素数の数</p>
+                <input type="text" id="primeMax" class="primeMax" value="50">
+                <p class="primeLabel">表示順</p>
+                <div class="primeOrderFlex">
+                    <select class="primeOrder" id="primeOrder">
+                        <option value="asc">小さい順に</option>
+                        <option value="desc">大きい順に</option>
+                    </select>
+                    <button class="primeConvert" id="primeConvert">素数検出</button>            
+                </div>
+            </div>
+            <div class="messageWindow" id="messageWindow">メッセージウインドウ。ここに結果が出ます。</div>
         </div>
+        
     </main>
-    <script>
-        'use strict';
-
-    </script>
-
+<script src="scripts/script.js"></script>
 </body>
 </html>
