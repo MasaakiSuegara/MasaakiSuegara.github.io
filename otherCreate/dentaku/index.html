@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- NotoSansJapaneseとNotoSerifJapaneseのgooglefonts使用 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>電卓_ポートフォリオ</title>
+</head>
+<body>
+    <header>
+        <p class="title">電卓</p>
+    </header>
+    <main>
+        <div class="flexBox">
+            <section class="calculate">
+                <input type="text" id="cWindow" class="display" value="0">
+                <button type="button" class="cButton" value="1"><span class="num">1</span></button>
+                <button type="button" class="cButton" value="2"><span class="num">2</span></button>
+                <button type="button" class="cButton" value="3"><span class="num">3</span></button>
+                <button type="button" class="cButton" id="" value="+"><span class="ope">＋</span></button>
+                <button type="button" class="cButton" value="4"><span class="num">4</span></button>
+                <button type="button" class="cButton" value="5"><span class="num">5</span></button>
+                <button type="button" class="cButton" value="6"><span class="num">6</span></button>
+                <button type="button" class="cButton" value="-"><span class="ope">ー</span></button>
+                <button type="button" class="cButton" value="7"><span class="num">7</span></button>
+                <button type="button" class="cButton" value="8"><span class="num">8</span></button>
+                <button type="button" class="cButton" value="9"><span class="num">9</span></button>
+                <button type="button" class="cButton" value="*"><span class="ope">✕</span></button>
+                <button type="button" class="cButton" value="0"><span class="num">0</span></button>
+                <button type="button" class="cButton" value="+/-" id="pmChange"><span class="num">+/-</span></button>
+                <button type="button" class="cButton" value="." id="ponit"><span class="num">.</span></button>
+                <button type="button" class="cButton" value="/"><span class="ope">÷</span></button>
+                <button type="button" class="cButton allClear" value="AC" id="allClear"><span class="ope">AC</span></button>
+                <button type="button" class="cButton oneClear" value="C" id="oneClear"><span class="ope">C</span></button>
+                <button type="button" class="Ecall" value="=" id="equal"><span class="ope">=</span></button>
+            </section>
+            <section class="calcFlow">
+                    <p class="flow">被乗数(式の左)</p>
+                    <input type="text" id="firstNumber" class="flow clear" value="">
+                    <p class="flow">演算子</p>
+                    <input type="text" id="secondOperator" class="flow  clear" value="">
+                    <p class="flow">乗数(式の右)</p>
+                    <input type="text" id="thirdNumber" class="flow clear" value="">
+                    <p class="flow">計算結果</p>
+                    <input type="text" id="cResult" class="flow clear" value="">
+            </section>
+        </div>
+        <div class="messageWindow" id="messageWindow">計算履歴。ここに計算結果のメモリーが入ります。<span class="blinking">＿</span></div>
+    </main>
+    <script src="scripts/script.js"></script>
+</body>
+</html>
