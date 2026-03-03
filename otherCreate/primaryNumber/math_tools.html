@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- 外部CSSの読み込み -->
+    <link rel="stylesheet" href="math_tools.css">
+    <title>数学ツール</title>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>// MATH_TOOLS.js</h1>
+        <p>進数変換 / 素数判定 / 因数分解</p>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab('base', this)">進数変換</button>
+        <button class="tab-btn" onclick="switchTab('prime', this)">素数判定</button>
+        <button class="tab-btn" onclick="switchTab('factor', this)">因数分解</button>
+        <button class="tab-btn" onclick="switchTab('game', this)">ランダム遊び</button>
+    </div>
+
+    <!-- 進数変換 -->
+    <div class="tab-panel active" id="tab-base">
+        <div class="panel">
+            <p class="panel-title">// BASE_CONVERTER</p>
+            <div class="field">
+                <label>変換したい数値を入力</label>
+                <div class="input-row">
+                    <input type="text" id="baseInput" placeholder="例: 255 または FF または 11111111">
+                    <select id="fromBase">
+                        <option value="10">10進数</option>
+                        <option value="2">2進数</option>
+                        <option value="8">8進数</option>
+                        <option value="16">16進数</option>
+                    </select>
+                    <button onclick="convertBase()">変換</button>
+                </div>
+            </div>
+            <div class="base-results">
+                <div class="base-card b2">
+                    <div class="base-label">2進数 (Binary)</div>
+                    <div class="base-value" id="res2">—</div>
+                </div>
+                <div class="base-card b8">
+                    <div class="base-label">8進数 (Octal)</div>
+                    <div class="base-value" id="res8">—</div>
+                </div>
+                <div class="base-card b10">
+                    <div class="base-label">10進数 (Decimal)</div>
+                    <div class="base-value" id="res10">—</div>
+                </div>
+                <div class="base-card b16">
+                    <div class="base-label">16進数 (Hex)</div>
+                    <div class="base-value" id="res16">—</div>
+                </div>
+            </div>
+            <div class="err" id="baseError"></div>
+        </div>
+    </div>
+
+    <!-- 素数判定 -->
+    <div class="tab-panel" id="tab-prime">
+        <div class="panel">
+            <p class="panel-title">// PRIME_CHECKER</p>
+            <div class="field">
+                <label>調べたい自然数を入力</label>
+                <div class="input-row">
+                    <input type="number" id="primeInput" placeholder="例: 97" min="1">
+                    <button onclick="checkPrime()">判定</button>
+                </div>
+            </div>
+            <div id="primeVerdict"></div>
+            <hr class="sep">
+            <p class="panel-title">// PRIME_LIST — 指定した数以下の素数を列挙</p>
+            <div class="field">
+                <label>上限を入力（最大1000）</label>
+                <div class="input-row">
+                    <input type="number" id="primeListInput" placeholder="例: 100" min="2" max="1000">
+                    <button onclick="listPrimes()">列挙</button>
+                </div>
+            </div>
+            <div class="result-box">
+                <div class="label">結果</div>
+                <div class="value" id="primeListValue">—</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 因数分解 -->
+    <div class="tab-panel" id="tab-factor">
+        <div class="panel">
+            <p class="panel-title">// FACTORIZER</p>
+            <div class="field">
+                <label>因数分解したい自然数を入力</label>
+                <div class="input-row">
+                    <input type="number" id="factorInput" placeholder="例: 360" min="2">
+                    <button onclick="doFactorize()">分解</button>
+                </div>
+            </div>
+            <div class="factor-display" id="factorDisplay"></div>
+        </div>
+    </div>
+
+    <!-- ランダム遊び -->
+    <div class="tab-panel" id="tab-game">
+        <div class="panel">
+            <p class="panel-title">// RANDOM_FACTORIZER — この数を因数分解できる？</p>
+            <div class="game-area">
+                <div class="big-number" id="gameNumber">?</div>
+                <div class="game-answer" id="gameAnswer">ボタンを押してスタート</div>
+                <div class="hint-text" id="gameHint"></div>
+                <div class="game-buttons">
+                    <button onclick="generateRandom()">ランダム生成</button>
+                    <button class="secondary" onclick="revealAnswer()">答えを見る</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JSはbodyの一番下に書く（HTML要素が全部読まれた後にJSが動くため） -->
+<script src="math_tools.js"></script>
+</body>
+</html>

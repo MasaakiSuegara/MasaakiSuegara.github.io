@@ -1,0 +1,344 @@
+@charset "UTF-8";
+
+body {
+    background-color:#bbf1ef;
+    font-family: 'Noto Sans JP', 'Noto Serif JP', sans-serif;
+    font-size: 14px;
+    width: 100%;
+}
+
+
+.messageWindow {
+    border:2px double #181820;
+    height:200px;
+    margin:20px;
+    white-space: pre-wrap;
+    overflow : hidden scroll;
+}
+/* ゲームウインドウらしく点滅させる。 */
+
+@keyframes blinking {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.blinking {
+  animation: blinking 1s steps(1, end) infinite;
+}
+
+body {
+    background-color: #4cf570;
+    color: #181820;
+    font-family: "DotGothic16", "Noto Sans JP", sans-serif;
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 820px;
+    letter-spacing: 0.06em;
+    line-height: 1.5;
+    padding: 10px 12px 20px;
+}
+
+/* 全体を詰める */
+header,
+main,
+div,
+section,
+p,
+h1 {
+    box-sizing: border-box;
+}
+
+header {
+    border: 2px solid #181820;
+    background-color: #f0e8c0;
+    margin: 8px 0 12px;
+    padding: 10px 12px;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #181820;
+    margin-bottom: 8px;
+    padding: 6px 8px;
+    background-color: #fff7d8;
+}
+
+.titleName {
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* 各ブロック */
+.baseBlock,
+.primeBlock,
+.baseResults,
+.messageWindow {
+    border: 2px solid #181820;
+    background-color: #f5f5dc;
+}
+
+.baseBlock,
+.primeBlock {
+    padding: 10px 12px;
+    margin-bottom: 10px;
+}
+.primeBlock {
+    display: flex;
+    gap:30px;
+}
+.baseLabel,
+.primeLabel {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.baseBlock p,
+.primeBlock p {
+    margin-bottom: 4px;
+}
+
+/* 入力欄：大きめ */
+.baseInput,
+.primeInput,
+.primeMax {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 48px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    border: 2px solid #181820;
+    background-color: #ffffff;
+    color: #181820;
+    font-size: 20px;
+    font-family: "DotGothic16", "Noto Sans JP", sans-serif;
+}
+
+/* 選択欄：少し小さめ + 矢印 */
+.fromBase,
+.primeOrder {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 36px;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+    border: 2px solid #181820;
+    background-color: #ffffff;
+    color: #181820;
+    font-size: 14px;
+    font-family: "DotGothic16", "Noto Sans JP", sans-serif;
+}
+
+/* ボタン */
+
+.primeConvert {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    height: 36px;
+    padding: 0 12px;
+    margin: 0;
+    border: 2px solid #181820;
+    background-color: #E6A417;
+    color: #181820;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "DotGothic16", "Noto Sans JP", sans-serif;
+    cursor: pointer;
+}
+.baseConvert  {
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    height: 36px;
+    padding: 0 12px;
+    margin: 0;
+    border: 2px solid #181820;
+    background-color: #E6A417;
+    color: #181820;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: "DotGothic16", "Noto Sans JP", sans-serif;
+    cursor: pointer;
+}
+.fromBaseFlex {
+    display:flex; 
+    gap:10px;
+}
+
+.baseConvert:hover,
+.primeConvert:hover {
+    background-color: #c0c0c0;
+    transition: all 200ms ease-in 0ms;
+}
+
+.primeConvert {
+    margin-bottom: 8px;
+}
+.primeOrderFlex {
+    display: flex;
+    gap:8px;
+}
+/* 進数結果 */
+.baseResults {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.baseCard {
+    border: 2px solid #181820;
+    background-color: #fffdf2;
+}
+
+.baseCard .baseLabel {
+    background-color: #181820;
+    color: #f5f5dc;
+    text-align: center;
+    margin: 0;
+    padding: 6px 4px;
+    font-size: 13px;
+}
+
+.baseValue,
+.basearVvalue {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 8px;
+    font-size: 22px;
+    font-weight: bold;
+    word-break: break-all;
+    background-color: #fffdf2;
+}
+
+/* 補助メッセージ */
+.baseMessage,
+.primeMessage {
+    margin-bottom: 12px;
+    font-size: 13px;
+    background-color: #f0e8c0;
+}
+
+/* メッセージウインドウ
+   元ページは height:200px だったが、それではこの用途では小さいので拡張 */
+.messageWindow {
+    border: 2px double #181820;
+    background-color: #f0e8c0;
+    height:250px;
+    padding: 12px;
+    margin: 10px 0 0;
+    white-space: pre-wrap;
+    overflow: hidden scroll;
+    font-size: 15px;
+    line-height: 1.65;
+}
+
+/* ゲームウインドウ風 */
+.messageWindow::after {
+    content: " _";
+    animation: blinking 1s steps(1, end) infinite;
+}
+
+
+/* 余白の整理 */
+.primeConvert {
+    margin-bottom: 8px;
+}
+
+/* 点滅 */
+@keyframes blinking {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking {
+    animation: blinking 1s steps(1, end) infinite;
+}
+
+/* フォーカス */
+.baseInput:focus,
+.primeInput:focus,
+.primeMax:focus,
+.fromBase:focus,
+.primeOrder:focus {
+    outline: 2px solid #c02020;
+    outline-offset: 1px;
+}
+
+/* スマホ */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 12px;
+        padding: 8px 8px 16px;
+    }
+
+    header {
+        margin-bottom: 10px;
+        padding: 8px;
+    }
+
+    header h1 {
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+
+    .titleName {
+        font-size: 12px;
+    }
+
+    .baseResults {
+        grid-template-columns: 1fr;
+    }
+
+    .baseInput,
+    .primeInput,
+    .primeMax {
+        max-width: 100%;
+        height: 44px;
+        font-size: 18px;
+    }
+    .fromBase,
+    .primeOrder {
+        min-width: 150px;
+        height: 36px;
+        font-size: 13px;
+    }
+    .baseConvert,
+    .primeConvert {
+        width: 100%;
+        min-width: 0;
+    }
+    .baseValue,
+    .basearVvalue {
+        min-height: 56px;
+        font-size: 18px;
+    }
+    .messageWindow {
+        min-height: 280px;
+        max-height: 360px;
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+body {
+
+    font-family: "M PLUS 1", 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    width: 375px;
+    margin: 0 auto;
+}
+.bgColor {
+    background-color: #4cf570;
+}
+.colorRandom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.colorBox {
+    border : 5px solid #000;
+    width: 300px;
+    height: 150px;
+    background-color: rgba(255,255,255);
+    margin-bottom:20px;
+}
+.colorEx {
+    width:300px;
+    font-size: 24px;
+    border :1px solid #000;
+    margin-bottom:10px;
+    background-color : #fff;
+    text-align: center;
+}
+.colorButton {
+    width:75px;
+    height:30px;
+    line-height: 30px;
+    font-size:14px;
+    border:1px solid #000;
+    background-color:rgb(255, 255, 255,1);
+    text-align: center;
+    margin:20px auto;
+}
+
+.rgb {
+    display: flex;
+    justify-content: center;
+    gap:20px;
+}
+.numberBox {
+    font-family: "DotGothic16", 'Noto Sans JP', sans-serif;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255,1);
+    text-align: center;
+}
+.pasteBlock ,.todayBlock{
+    width:300px;
+    margin-bottom:20px;
+    margin: 20px auto;
+}
+.rgbBlock,.rgbaBlock {
+    display:flex;
+    gap:10px;
+    height:30px;
+    margin-bottom:20px;
+}
+.rgbaCode , .rgbCode ,.todayColor,.opocityBlock{
+    width:200px;
+    height:30px;
+    line-height: 30px;
+    font-size: 14px;
+    border: 1px solid #000;
+    background-color: rgba(255, 255, 255,1);
+    text-align: center;
+    margin-right : 20px;
+}
+.rgbaPaste, .rgbPaste,.passion ,.opocity{
+    width:75px;
+    height:30px;
+    font-size: 14px;
+    border: 1px solid #000;
+    background-color: #e8e8e8;
+    text-align: center;
+}
+
+.todayBlock ,.opocityBlock {
+    display: flex;
+
+}
+
+ol {
+    border: 1px solid #000;
+    background-color: #fff;
+    margin: 0 auto;
+}
